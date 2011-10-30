@@ -12,8 +12,8 @@
 		"type": "BSD",
 		"url": "http://www.freebsd.org/copyright/freebsd-license.html"
 	}],
-  "bin":          {
-    "mpd-rest": "./bin/mpd-rest",
+  "bin": {
+    "mpd-rest": "./bin/mpd-rest"
   },
  	"repository": {
 		"type": "git",
