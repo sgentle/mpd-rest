@@ -1,0 +1,22 @@
+{
+	"name": "mpd-rest",
+	"version": "0.0.0",
+	"description": "RESTful mpd interface",
+	"main": "index.js",
+	"dependencies": {
+		"coffee-script": "> 1.1.0",
+		"express": ">= 1.5.0",
+		"mpdsocket": "git://github.com/sgentle/node-mpdsocket.git"
+	},
+	"licenses": [{
+		"type": "BSD",
+		"url": "http://www.freebsd.org/copyright/freebsd-license.html"
+	}],
+  "bin":          {
+    "mpd-rest": "./bin/mpd-rest",
+  },
+ 	"repository": {
+		"type": "git",
+		"url": "http://github.com/sgentle/mpd-rest.git"
+	}
+}

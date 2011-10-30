@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+require('coffee-script');
+var path = require('path');
+var express = require('express');
+
+var lib  = path.join(__dirname, '..');
+var mpd_rest = require(path.join(lib,'mpd-rest'));
+
+
+var app = express.createServer();
+
+app.use(mpd_rest('achilles.local'));
+
+app.listen(4000);
