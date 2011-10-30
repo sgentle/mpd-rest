@@ -75,8 +75,14 @@ module.exports = (host='localhost', port=6600) ->
   api '/songs/current',
     get: "currentsong"
     post: (req) ->
-      if req.body.Id?
-        "playid #{req.body.Id}"
+      id = req.body.Id
+      if id?
+        if id == 'next'
+          "next"
+        else if id == 'prev'
+          "previous"
+        else
+          "playid #{id}"
 
   api '/songs/:id',
     get:
@@ -91,7 +97,7 @@ module.exports = (host='localhost', port=6600) ->
 
   api '/db/search',
     get:
-      to: (req) -> "search #{req.param 'type', 'any'} #{req.param 'q', ''}"
+      to: (req) -> "search #{req.param 'type', 'any'} \"#{req.param 'q', ''}\""
   
   app
 
