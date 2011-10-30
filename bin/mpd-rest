@@ -9,6 +9,7 @@ var mpd_rest = require(path.join(lib,'mpd-rest'));
 
 var app = express.createServer();
 
-app.use(mpd_rest('achilles.local'));
+// Should have optimist args here
+app.use(mpd_rest());
 
 app.listen(4000);
